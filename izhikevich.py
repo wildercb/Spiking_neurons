@@ -73,8 +73,7 @@ def run_simulation():
 
         screen.fill(background_color)  # Fill the background with black color
 
-        # No need for a grid on a black background unless desired
-        # draw_grid()  # Draw the grid if needed
+        # draw_grid()  # Draw the grid 
 
         # Draw lines connecting points with proper wrapping
         for i in range(1, len(points)):
@@ -85,7 +84,7 @@ def run_simulation():
                 continue
             pygame.draw.line(screen, line_color, start_point, end_point, line_thickness)
 
-        # Real-time data display with fluorescent green writing
+        # Real-time data display 
         text_surface = font.render(f'Membrane Potential: {v:.2f} mV', True, text_color)
         screen.blit(text_surface, (10, 10))
 
